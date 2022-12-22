@@ -1,4 +1,5 @@
 import express from "express";
+import {PORT} from "./config.js";
 import authRouter from "./routes/auth.js";
 import userRouter from "./routes/users.js";
 import postRouter from "./routes/posts.js";
@@ -33,6 +34,6 @@ app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/posts", postRouter);
 
-app.listen(8800, () => {
-	console.log("Connected in the port 8800! ");
+app.listen(PORT, () => {
+	console.log("Connected in the port ", PORT);
 });
